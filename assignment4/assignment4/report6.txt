@@ -1,0 +1,28 @@
+====== Testing midpoint for NORMAL ======
+N = 200000
+Time: 0.40241527557373047
+
+====== Testing midpoint for NUMPY ======
+N = 202790
+Time: 0.008075714111328125
+
+====== Testing midpoint for NUMBA ======
+N = 200000
+Time: 0.3015718460083008
+- All Success -
+
+------------------------------------------------------------
+You can see under each test what N needs to be to be within
+10E-10.
+You also see that Normal and Numba is approximately the same time,
+and I think this is caused by the code being almost the identical.
+But Numpy has a different type of code, so it has a different time than
+Normal and Numba.
+
+Notice: If you see in my code I have taken the time with assert and abs included.
+This MIGHT have a bit affect on the time-output. But again the assignment does not really
+ask to measure time in 4.6, but I've included it anyways...
+
+But as you can see in 4.4, I have tested time without assert and abs to get a more correct answer.
+
+christji

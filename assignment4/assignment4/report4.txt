@@ -1,0 +1,51 @@
+Different tests for numpy and numba functions
+
+
+f = x**2 | a = 0 | b = 1 | N = 100
+======================
+Test for NUMPY python
+0.000116 sec
+======================
+
+======================
+Test for NUMBA python
+0.239812 sec
+======================
+
+------------------------------------------------------------------
+f = x**2 | a = 0 | b = 1 | N = 100000
+======================
+Test for NUMPY python
+0.002074 sec
+======================
+
+======================
+Test for NUMBA python
+0.197139 sec
+======================
+
+------------------------------------------------------------------
+f = x**2 | a = 0 | b = 1 | N = 100000000
+======================
+Test for NUMPY python
+1.436396 sec
+======================
+
+======================
+Test for NUMBA python
+0.329309 sec
+======================
+
+-------------------------------------------------------------------
+I've tried comparing Numpy with Numba several times with different N.
+It looks like with growing N Numpy's time also grows, but Numba stays
+around the same time each time.
+
+But with higher N we see that Numba is working almost 10 times quicker than Numpy.
+So the higher N, Numba works better than Numpy.
+
+Advantages to using Numba is that it's simple to use (you simply "jit" the function)
+and run the same for loop as in intergrate. It also seems like Numba is better to use when
+N is very big. So with higher N, Numba will be in advantage of Numpy.
+
+christji

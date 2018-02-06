@@ -1,0 +1,45 @@
+Different tests for intergrate and numpy functions
+
+f = x**2 | a = 0 | b = 1 | N = 100
+======================
+Test for NORMAL python
+0.000044 sec
+======================
+
+======================
+Test for NUMPY python
+0.000116 sec
+======================
+
+-------------------------------------------------------------
+
+f = x**2 | a = 0 | b = 1 | N = 100000
+======================
+Test for NORMAL python
+0.090099 sec
+======================
+
+======================
+Test for NUMPY python
+0.002451 sec
+======================
+
+-------------------------------------------------------------
+
+f = x**2 | a = 0 | b = 1 | N = 100000000
+======================
+Test for NORMAL python
+35.866418 sec
+======================
+
+======================
+Test for NUMPY python
+1.426432 sec
+======================
+
+-------------------------------------------------------------------
+I've tried comparing Normal with Numpy several times with different N.
+It seems like Normal is a bit faster than Numpy when N is small. But with N growing, you'll see that Numpy's time will
+be alot faster than normal python.
+
+christji
